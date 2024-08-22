@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main_bg: #f44444;
+  --pge_color: #f7f7fb;
+  --input_color: #f0f2f5;
+  --line_color: #f0f2f5;
+  --primary_bg: #66717f;
+  --single_color: rgba(109, 40, 217, 1);
+  --secondary_bg: #28353e;
+  --hover_clr: #f0f2f5;
+  --blur: rgba(255, 255, 255, 0.8);
+  --text_color: #333;
+  --primary_color: #1fa0ef;
+  --secondary_color: #848f95;
+  --title_color: #66717f;
+  --black: #29313d;
+  --white: #fff;
+  --green: #21d997;
+  --blue: #5093f3;
+  --red: #e54953;
+  --yellow: #d9a94a;
+  --purple_100: #f3e8ff;
+  --pink_100: #fce7f3;
+  --cyan_100: #cffafe;
+}
+@font-face {
+  font-family: "Gilroy Regular";
+  src: url("./assets/fonts/Gilroy-Regular.ttf");
+}
+@font-face {
+  font-family: "Gilroy Black";
+  src: url("./assets/fonts/Gilroy-Black.ttf");
+}
+@font-face {
+  font-family: "Gilroy Bold";
+  src: url("./assets/fonts/Gilroy-Bold.ttf");
+}
+@font-face {
+  font-family: "Gilroy Extra Bold";
+  src: url("./assets/fonts/Gilroy-ExtraBold.ttf");
+}
+@font-face {
+  font-family: "Gilroy Light";
+  src: url("./assets/fonts/Gilroy-Light.ttf");
+}
+@font-face {
+  font-family: "Gilroy Medium";
+  src: url("./assets/fonts/Gilroy-Medium.ttf");
+}
+@font-face {
+  font-family: "Gilroy Semi Bold";
+  src: url("./assets/fonts/Gilroy-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Gilroy Thin";
+  src: url("./assets/fonts/Gilroy-Thin.ttf");
+}
+
+/* starts  */
+.stack-wrapper {
+  width: 501.14px;
+  height: 424px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  top: 400px;
+}
+.stack-list {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+}
+.stack-list:nth-child(1) {
+  z-index: 1;
+}
+.stack-list:nth-child(1):hover {
+  transition: all linear 0.3s;
+  left: -160px;
+  top: 47px;
+}
+.stack-list:nth-child(2) {
+  left: -160px;
+  top: 47px;
+  z-index: -1;
+}
+.stack-list:nth-child(3) {
+  left: -326px;
+  top: 97px;
+  z-index: -2;
+}
+.stack-wrapper .stack-list .highlighted-card {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.7s ease-out, transform 0.45s ease-out;
+}
+.stack-wrapper .stack-list .highlighted-card-0 {
+  top: 0;
+  z-index: 100;
+}
+.stack-wrapper .stack-list .highlighted-card.active {
+  opacity: 1;
+  transform: translateX(75px) translateY(45px);
+}
+/* top box gradiant and text starts */
+.stack-wrapper .stack-list .highlighted-card-top-side {
+  width: 251.53px;
+  height: 251.53px;
+  border-radius: 6.68px;
+  box-sizing: border-box;
+  position: absolute;
+  border: 0.56px solid #fff;
+  transform: matrix(0.87, -0.5, 0.87, 0.5, 91, -121);
+  display: flex;
+  justify-content: flex-end;
+  background: linear-gradient(
+      -60.36deg,
+      rgba(83, 61, 221, 0.9) 7.81%,
+      rgba(201, 61, 148, 0.9) 92.19%
+    ),
+    linear-gradient(0deg, #fff, #fff);
+  z-index: 100;
+  -webkit-transform: matrix(0.87, -0.5, 0.87, 0.5, 91, -121);
+  -moz-transform: matrix(0.87, -0.5, 0.87, 0.5, 91, -121);
+  -ms-transform: matrix(0.87, -0.5, 0.87, 0.5, 91, -121);
+  -o-transform: matrix(0.87, -0.5, 0.87, 0.5, 91, -121);
+}
+.stack-wrapper .stack-list .highlighted-card-text-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 3px;
+  padding: 25px 40px;
+  justify-content: center;
+}
+.stack-wrapper .stack-list .highlighted-card-text {
+  font-size: 20.56px;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  color: #fff;
+}
+/* top box gradiant and text ends */
+.stack-wrapper .stack-list .highlighted-card-bottom-side {
+  position: absolute;
+  width: 251.53px;
+  height: 251.53px;
+  border-radius: 6.68px;
+  transform: matrix(0.87, -0.5, 0.87, 0.5, 100, 16);
+  background: linear-gradient(180deg, #6be55e, #8ad1e0);
+  z-index: 40;
+}
+/* unhighlited card */
+.stack-wrapper .stack-list .unhighlighted-card {
+  position: absolute;
+  top: 0;
+  /* opacity 0 hides the black img border shape */
+  opacity: 1;
+  transition: opacity 0.7s ease-out, transform 0.45s ease-out;
+}
+.stack-wrapper .stack-list .unhighlighted-card-0 {
+  top: 0;
+  z-index: 100;
+}
+/* black box top */
+.stack-wrapper .stack-list .unhighlighted-card-top-side {
+  width: 251.53px;
+  height: 251.53px;
+  border-radius: 6.68px;
+  box-sizing: border-box;
+  position: absolute;
+  border: 0.56px solid #fff;
+  transform: matrix(0.87, -0.5, 0.87, 0.5, 100, 0);
+  display: flex;
+  justify-content: flex-end;
+  background: linear-gradient(-60.36deg, #0c111d 7.81%, #0c111d 92.19%),
+    linear-gradient(0deg, #0c111d, #0c111d);
+  z-index: 100;
+}
+.stack-wrapper .stack-list .unhighlighted-card-text-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 3px;
+  padding: 25px 40px;
+  justify-content: center;
+}
+.stack-wrapper .stack-list .unhighlighted-card-text {
+  font-size: 20.56px;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  color: #0c111d;
+}
+/* bottom box */
+.stack-wrapper .stack-list .unhighlighted-card-bottom-side {
+  position: absolute;
+  width: 251.53px;
+  height: 251.53px;
+  border-radius: 6.68px;
+  transform: matrix(0.87, -0.5, 0.87, 0.5, 100, 16);
+  background: linear-gradient(180deg, #0c111d, #0c111d);
+  z-index: 40;
+}
